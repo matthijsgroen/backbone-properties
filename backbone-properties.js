@@ -3,17 +3,15 @@
   var __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
-  (function(name, context, factory) {
+  (function(factory) {
     if (typeof require === "function" && typeof exports === "object" && typeof module === "object") {
       return module.exports = factory();
     } else if (typeof define === "function" && define.amd) {
       return define(function() {
         return factory();
       });
-    } else {
-      return context[name] = factory();
     }
-  })('Backbone.Properties', this, function() {
+  })(function() {
     return Backbone.Model = (function(_super) {
 
       __extends(Model, _super);

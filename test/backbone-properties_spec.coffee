@@ -29,4 +29,8 @@ describe 'Backbone Properties', ->
       @model.should.trigger('change:firstName', with: [@model, 'Alice']).when =>
         @model.firstName = "Alice"
 
+    it 'assigns the models attribute', ->
+      @model.firstName = "Charles"
+      @model.get('firstName').should.equal "Charles"
+
 
